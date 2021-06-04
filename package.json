@@ -1,0 +1,81 @@
+{
+  "name": "RNAssigment",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "babel": {
+    "env": {
+      "production": {
+        "plugins": [
+          "transform-remove-console"
+        ]
+      }
+    }
+  },
+  "dependencies": {
+    "react": "17.0.1",
+    "react-native": "0.64.2",
+    "@react-navigation/native": "^5.4.3",
+    "@react-navigation/stack": "^5.4.0",
+    "@react-native-community/async-storage": "^1.11.0",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-native-community/netinfo": "^5.9.2",
+    "@react-native-community/toolbar-android": "^0.1.0-rc.2",
+    "@types/lodash": "^4.14.168",
+    "react-native-localization": "^2.1.6",
+    "@types/react-native-popup-dialog": "^0.16.2",
+    "react-native-popup-dialog": "^0.18.3",
+    "react-native-safe-area-context": "^2.0.3",
+    "react-native-responsive-screen": "^1.4.1",
+    "react-native-screens": "^2.8.0",
+    "react-native-gesture-handler": "^1.6.1",
+    "@types/react-redux": "^7.1.9",
+    "axios": "^0.19.2",
+    "moment": "^2.29.1",
+    "native-base": "^2.15.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/runtime": "^7.14.0",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@types/react": "^16.9.35",
+    "@types/react-native": "^0.64.2",
+    "babel-jest": "^27.0.2",
+    "eslint": "^7.27.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "jest": "^27.0.4",
+    "metro-react-native-babel-preset": "^0.66.0",
+    "react-native-typescript-transformer": "^1.2.13",
+    "react-test-renderer": "17.0.1",
+    "typescript": "^3.9.3"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/"
+    ],
+    "cacheDirectory": ".jest/cache"
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
+  }
+}
