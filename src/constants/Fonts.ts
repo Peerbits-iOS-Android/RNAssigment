@@ -28,6 +28,7 @@ export default {
         "_34px": 34,
     },
     name: {
+        logo_regular: 'Billabong-Regular',
         regular: 'Roboto-Regular',
         bold: 'Roboto-Bold',
         medium: 'Roboto-Medium',

@@ -33,6 +33,7 @@ export interface ToolbarProps {
     androidStatusBarColor?: string,
     backgroundColor?: string,
     left?: Option,
+    titleFont?: string,
     transparent?: boolean,
     isTitleLeft?: boolean,
     right?: Array<Option>,
@@ -97,7 +98,7 @@ class Toolbar extends Component<ToolbarProps> {
         let { title, image, titleColor, isTitleLeft } = this.props;
 
         if (title) {
-            return (<Title style={{ color: titleColor || Colors.black2, alignSelf: isTitleLeft ? 'flex-start' : 'center', ...styles.titleStyle }}>{title}</Title>)
+            return (<Title style={{ fontSize:Fonts.size._20px, color: titleColor || Colors.black2, alignSelf: isTitleLeft ? 'flex-start' : 'center', ...styles.titleStyle }}>{title}</Title>)
         } else if (image) {
             return (<Image source={image} style={{ alignSelf: 'center', resizeMode: 'contain', tintColor: this.props.titleColor }}
             />)
@@ -143,7 +144,6 @@ class Toolbar extends Component<ToolbarProps> {
 }
 
 const styles = {
-
     textStyle: {
         marginHorizontal: 4,
         fontSize: Fonts.size._17px,
@@ -151,9 +151,9 @@ const styles = {
         fontFamily: Fonts.name.bold
     },
     titleStyle: {
-        fontSize: Fonts.size._17px,
+        fontSize: Fonts.size._30px,
         fontWeight: "500",
-        fontFamily: Fonts.name.medium,
+        fontFamily: Fonts.name.logo_regular,
     },
     textContainerStyle: {
 

@@ -8,9 +8,9 @@ import { CommonStyle, MainContainer, ScrollContainer } from '../../common'
 
 const Splash: React.FC = () => {
 
-    // setTimeout(() => {
-    //     reset("NativeBaseHome")
-    // }, 3000)
+    setTimeout(() => {
+        reset("Home")
+    }, 3000)
 
     return (
         <MainContainer>

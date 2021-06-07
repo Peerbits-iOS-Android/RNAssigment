@@ -2,6 +2,9 @@ export default {
 
     getStarted: 'GET STARTED',
 
+    //Home Screen
+    PostIt : "Post It",
+
     //Change Language Screen
     changelanguageHeaderTitle: "Change Language",
     selectlanguageHeaderTitle: "Select Language",

@@ -1,7 +1,6 @@
 import NetInfo from '@react-native-community/netinfo';
 import axios, { AxiosResponse } from 'axios';
 import { appConfig, logger } from '..';
-import { IS_LOGGED_IN, KEY_TOKEN } from '../data/PrefKeys';
 
 export const METHOD = {
 
@@ -115,13 +114,14 @@ export default async (endpoint: string, params: any = {}, onSuccess: (res: Respo
 
             if (response) {
                 if (response.status == 200) {
-                    if (response.data.status == 1 || response.data.success == 1) {
+                    if (response.data.status == 1 || response.data.success == 1 || response.success == true ) {
                         try {
-                            onSuccess(response.data.data ? response.data.data as Response : response.data as Response)
+                            onSuccess(response.data as Response)
 
                             //onSuccess(response)
 
                         } catch (err) {
+                            console.log("Called from here")
                             logger('Error', err);
                             onFailure('Something went wrong')
                         }

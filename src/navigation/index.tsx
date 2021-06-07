@@ -1,5 +1,6 @@
 import React from 'react'
 import Splash from '../components/splash/ChildComponent/Splash';
+import Home from '../components/home/ChildComponent/Home';
 import { navigationRef } from './RootNavigation';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -14,6 +15,7 @@ export default () => {
         <NavigationContainer ref={navigationRef} >
             <Stack.Navigator headerMode="none" initialRouteName="Splash">
                 <Stack.Screen component={Splash} name="Splash" />
+                <Stack.Screen component={Home} name="Home" />
             </Stack.Navigator>
         </NavigationContainer>
     )
