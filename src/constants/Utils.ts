@@ -46,34 +46,4 @@ export default {
             default: return "$"
         }
     },
-
-    getRoles(roles: Number[]) {
-        let rolesList = "";
-        roles.map((value, index) => {
-            if (index == roles.length - 1) {
-                switch (value) {
-                    case 1: rolesList += Strings.Editor
-                        break;
-                    case 2: rolesList += Strings.ProofReader
-                        break;
-                    case 3: rolesList += Strings.Translator
-                        break;
-                    case 4: rolesList += Strings.Influencer
-                        break;
-                }
-            } else {
-                switch (value) {
-                    case 1: rolesList += Strings.Editor + ", "
-                        break;
-                    case 2: rolesList += Strings.ProofReader + ", "
-                        break;
-                    case 3: rolesList += Strings.Translator + ", "
-                        break;
-                    case 4: rolesList += Strings.Influencer + ", "
-                        break;
-                }
-            }
-        })
-        return rolesList;
-    },
 }

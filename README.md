@@ -20,6 +20,7 @@ To Run this app in iOS device use : <br />
 2. react-native (FlatList, StyleSheet, TouchableOpacity, TouchableNativeFeedback, Dimension)
 3. react-native-scalable-image (Image) For scalable image to adjust height accordingly as per Image
 4. moment for date and time
+5. react-native-image-crop-picker For camera and Image picke for Add post
 
 ##### Assets to be linked
 1. Fonts (Roboto, Billabong)

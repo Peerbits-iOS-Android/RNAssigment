@@ -7,6 +7,7 @@ import { MainContainer, ProgressDialog } from '../../common'
 import PostListItem from '../ListItem/PostListItem'
 import { apiCall, apiConstant, METHOD } from '../../../core';
 import { filter } from 'lodash';
+import { push } from '../../../navigation/RootNavigation'
 
 
 const Home: React.FC = ({ navigation }) => {
@@ -22,6 +23,7 @@ const Home: React.FC = ({ navigation }) => {
     }, [])
 
     const apiGetHomeList = () => {
+        ProgressDialog.show()
         let params = {
             UserID: 1,
         }
@@ -98,7 +100,9 @@ const Home: React.FC = ({ navigation }) => {
                 keyExtractor={(item, index) => "key" + index}
             />
 
-            <Button style={{ width: 50, height: 50, justifyContent: 'center', position: 'absolute', bottom: 0, right: 0, margin: 20 }} rounded>
+            <Button style={{ width: 50, height: 50, justifyContent: 'center', position: 'absolute', bottom: 0, right: 0, margin: 20 }} rounded onPress={() => {
+                push('AddPost')
+            }}>
                 <Thumbnail style={{ width: 50, height: 50, alignSelf: 'center' }} source={Images.ic_Post} />
             </Button>
         </MainContainer >
